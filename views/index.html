@@ -5,14 +5,168 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form>
+    <nav class="center">
+        <span class="logo">LOGO</span>
+        <ul class="center">
+            <li>Accueil</li>
+            <li>Les formations</li>
+            <li>La web team</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <div class="banner center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-7 col-md-7 center">
+                    <div class="left-bloc ">
+                        <div><h1><span style="font-weight: lighter; text-decoration: underline;">Apprenez</span> à coder</h1></div>
+                        <div class="punch-line">Je développe mon site de A à Z avec...</div>
+                        <div class="languages">
+                            <img src="images/html.png" width="20%" alt="">
+                            <img src="images/css.png" width="18%" alt="">
+                            <img src="images/js.png" width="15%" alt="">
+                        </div> 
+                        <p>Nous vous enseignons les compétences essentielles en HTML, CSS et JAVASCRIPT pour travailler de chez vous, gagner en indépendance ou vous reconvertir dans le web.</p>
+                            <!-- <p class="list-punch-lines">Pourquoi coder...</p>
+                            <ul>
+                                <li>Je travaille de chez moi</li>
+                                <li>Je change de poste dans mon entreprise</li>
+                                <li>Je gagne en indépendance et en liberté</li>
+                                <li>Je me reconvertis</li>
+                            </ul> -->
+                        <button class="cta" style="margin-right: 50px;">Découvrez les formations</button>
+                        <button class="cta">Contactez-nous</button>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-5 col-md-5 center">
+                    <div class="right-bloc">
+                        <img src="images/dev-group.jpg" width="100%" alt="">
+                        <!-- <div class="formation center">
+                            2 jours : Objectif, faire un site one-page de photographe
+                        </div>
+                        <div class="formation center">
+                            3 jours : Objectif, faire un site one-page type AirBnB
+                        </div>
+                        <div class="formation center">
+                            4 jours : Objectif, créer une interface web dynamique type Oui.sncf
+                        </div>
+                        <div class="formation center">
+                            5 jours : Objectif, créer une interface de boutique en ligne avec plusieurs pages
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="text-bloc">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos voluptatem excepturi repellat eius, possimus dolor exercitationem unde voluptatum iste rem accusamus voluptas dolorum sapiente, illum, sit accusantium! Autem quo rem minima exercitationem maiores neque sunt optio magnam harum laborum. Officiis.</p>
+        </div>
+        
+        <div class="bloc3" style="margin-top: 100px;">
+            <h2 style="font-size: 40px; color: black; font-weight: bolder; ">Les avantages à devenir développeur</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="div col-xs-12 col-ms-6 col-md-3">
+                        <h3 class="feature center">Je travaille de chez moi</h3>
+                    </div>
+                    <div class="div col-xs-12 col-ms-6 col-md-3">
+                        <h3 class="feature center">J'évolue au sein de mon entreprise</h3>
+                    </div>
+                    <div class="div col-xs-12 col-ms-6 col-md-3">
+                        <h3 class="feature center">Je gagne en indépendance</h3>
+                    </div>
+                    <div class="div col-xs-12 col-ms-6 col-md-3">
+                        <h3 class="feature center">Je me reconvertis dans le web</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+    <div class="bloc2">
+            <!-- <h3>Je me forme en...</h3> -->
+        <div class="accordion" id="accordionExample">
+                <div class="card-button">
+                    <div class="" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="cta collapse-button" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        2 jours de formation : Objectif, faire un site one-page de photographe
+                        </button>
+                    </h2>
+                    </div>
+                
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quas explicabo ut nihil fuga quis corrupti minus cumque numquam aliquid. Iste quibusdam nesciunt adipisci hic quos reprehenderit dignissimos facilis, voluptas laudantium voluptate sunt fuga a sit, ratione quae aperiam totam!
+                    </div>
+                    </div>
+                </div>
+                <div class="card-button">
+                    <div class="" id="headingTwo">
+                    <h2 class="mb-0">
+                        <button class="cta collapse-button collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        3 jours de formation : Objectif, faire un site one-page type AirBnB
+                        </button>
+                    </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis alias nam quisquam, ipsum commodi nulla dicta molestias dolorum modi ad ab enim molestiae facilis optio! Eos ratione sit quisquam voluptas nihil impedit, aut est ipsam consequuntur provident, fuga eveniet odit.
+                    </div>
+                    </div>
+                </div>
+                <div class="card-button">
+                    <div class="" id="headingThree">
+                    <h2 class="mb-0">
+                        <button class="cta collapse-button collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                4 jours : Objectif, créer une interface web dynamique type Oui.sncf
+                        </button>
+                    </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum molestiae, iure deserunt aut ratione nesciunt impedit fugiat autem quasi quam dolorem commodi eos iusto harum culpa ad incidunt? Quasi veniam pariatur, ratione quaerat dicta quam labore dignissimos cumque ipsum nobis?
+                    </div>
+                    </div>
+                </div>
+                <div class="card-button">
+                        <div class="" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="cta collapse-button collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                5 jours : Objectif, créer une interface de boutique en ligne avec plusieurs pages
+                            </button>
+                        </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div class="card-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, molestias ullam, autem dolor quos repellat modi dolorem vitae repellendus placeat molestiae debitis totam! Cupiditate reiciendis est repellendus similique ab, obcaecati corporis, laudantium aliquid nisi, error optio id natus a fuga.
+                        </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+
+
+
+    <!-- <form>
         <input type="text" id="sujet" placeholder="sujet"><br>
         <input type="text" id="email" placeholder="email"><br>
         <textarea type="text" id="text" cols="30" rows="10" placeholder="texte"></textarea>
         <input type="submit" id="submit">
-    </form>
-    <script src="/public/formData.js"></script>
+    </form> -->
+    <!-- <script src="/public/formData.js"></script> -->
+<script src="navbar.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>

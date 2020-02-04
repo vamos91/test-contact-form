@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,300,400,700&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+nav{
+    position: fixed;
+    padding: 10px;
+    width: 100%;
+    height: 10vh;
+    font-weight: bolder;
+    z-index: 1000;
+    border-bottom: 1px solid rgb(131,58,180, 0.4);
+    transition: .4s;
+}
+
+.nav-scroll{
+    background-color: white;
+    color: gray;
+    transition: .4s;
+}
+
+li{
+    list-style: none;
+    padding: 0px 10px;
+}
+
+h1{
+    font-size: 64px;
+    font-weight: bolder;
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    position: absolute;
+    left: 20px;
+}
+
+.punch-line{
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.banner{
+    background-image: linear-gradient(90deg, rgba(27,231,169,0.9) 0%, rgba(102,137,235,0.9) 100%), url("/images/banner.jpg"); 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    /* background: rgba(131,58,180); */
+    /* background: linear-gradient(90deg, rgba(131,58,180,0.5) 0%, rgba(253,29,29,0.5) 50%, rgba(252,176,69,0.5) 100%); */
+    height: 100vh;
+    color: white;
+}
+
+.right-bloc img{
+    box-shadow:  0 10px 30px rgba(0,0,0,.1);
+}
+
+.cta{
+    background-color: #06EDA4;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+    border-top-left-radius: 20px;
+    box-shadow:  0 10px 30px rgba(0,0,0,.1);
+    transition: .4s;
+}
+
+.cta:hover{
+    color: #06EDA4;
+    background-color: white;
+    transition: .4s;
+}
+
+.formation{
+    background-color: #6B7DF1;
+    color: white;
+    padding: 20px;
+    font-weight: bolder;
+    font-size: 24px;
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow:  0 10px 30px rgba(0,0,0,.1);
+}
+
+.languages{
+    margin-bottom: 100px;
+}
+
+.bloc2{
+    background-image: linear-gradient(90deg, rgba(255,255,255) 40%, rgba(252,176,69,0) 100%), url("/images/dev-freelance.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: #222222;
+}
+
+.accordion{
+    width: 40%;
+    padding-left: 30px;
+}
+
+.collapse-button{
+    width: 100%;
+    background: rgb(27,231,169);
+    background: linear-gradient(90deg, rgba(27,231,169,1) 0%, rgba(102,137,235,1) 100%);
+}
+
+.card-button{
+    padding: 10px;
+    /* box-shadow:  0 10px 30px rgba(0,0,0,.1); */
+
+}
+
+.bloc3{
+    background-color: #FAFAFA;
+    padding: 100px;
+    color: gray;
+    text-align: center;
+}
+
+.bloc3 .container{
+    vertical-align: center;
+
+}
+
+.text-bloc{
+    color: gray;
+    padding: 50px;
+    width: 60%;
+    margin: 20px auto;
+}
+
+.feature{
+    height: 250px;
+    transition: .4s;
+    font-size: 24px;
+}
+
+.feature:hover{
+    padding: 0px;
+    background-color: #6B7DF1;
+    box-shadow:  0 10px 30px rgba(0,0,0,.1);
+    color: white;
+    transition: .4s;
+    border-radius: 20px;
+    border-top-left-radius: 70px;
+
+}
