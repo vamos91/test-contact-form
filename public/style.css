@@ -20,12 +20,6 @@ nav{
     transition: .4s;
 }
 
-.nav-scroll{
-    background-color: white;
-    color: gray;
-    transition: .4s;
-}
-
 li{
     list-style: none;
     padding: 0px 10px;
@@ -34,6 +28,39 @@ li{
 h1{
     font-size: 64px;
     font-weight: bolder;
+}
+
+ul{
+    margin-top: 16px;
+}
+
+.icone{
+    font-size: 60px;
+    color: #06EDA4; 
+}
+
+.text-gradient{
+    background: -webkit-linear-gradient(0deg, rgba(27,231,169,0.9) 0%, rgba(102,137,235,0.9) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.vertical-direction{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.padded{
+    padding-top:50px;
+    padding-bottom: 50px;
+}
+
+.nav-scroll{
+    background-color: white;
+    color: gray;
+    transition: .4s;
 }
 
 .center{
@@ -74,6 +101,7 @@ h1{
     font-weight: bold;
     font-size: 16px;
     border-radius: 5px;
+    border-color: #06EDA4;
     border-top-left-radius: 20px;
     box-shadow:  0 10px 30px rgba(0,0,0,.1);
     transition: .4s;
@@ -98,6 +126,7 @@ h1{
 
 .languages{
     margin-bottom: 100px;
+    letter-spacing: 75px;
 }
 
 .bloc2{
@@ -108,6 +137,12 @@ h1{
     display: flex;
     align-items: center;
     color: #222222;
+}
+
+.bloc2 h3{
+    font-size: 40px;
+    font-weight: bolder;
+    color: #06EDA4;
 }
 
 .accordion{
@@ -139,11 +174,23 @@ h1{
 
 }
 
+.fa-arrow-down{
+    margin: 20px auto;
+    width: 100%;
+}
+
 .text-bloc{
     color: gray;
-    padding: 50px;
-    width: 60%;
+    /* padding: 50px; */
+    padding-top: 100px;
+    padding-bottom: 100px;
+    width: 70%;
     margin: 20px auto;
+}
+
+.text-bloc h3{
+    font-size: 40px;
+    font-weight: bolder;
 }
 
 .feature{
@@ -160,5 +207,42 @@ h1{
     transition: .4s;
     border-radius: 20px;
     border-top-left-radius: 70px;
+}
 
+.media img{
+    width: 125px;
+}
+
+footer{
+    background-color: #6B7DF1;
+    height: 50vh;
+}
+
+#submit{
+    background-color: rgb(27,231,169);
+    border: 1px solid rgb(27,231,169);
+}
+
+.contact{
+    background-color: #6B7DF1;
+    color: white;
+    border-color: rgb(95, 95, 100);
+}
+
+.card{
+    margin-top: 30px;
+    background-color: #FAFAFA;
+    color: black;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+}
+
+.card img{
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.card a{
+    background-color: #6B7DF1;
 }
