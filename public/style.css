@@ -20,6 +20,10 @@ nav{
     transition: .4s;
 }
 
+.nav-item{
+    display: none;
+}
+
 li{
     list-style: none;
     padding: 0px 10px;
@@ -110,6 +114,10 @@ ul{
     border-top-left-radius: 20px;
     box-shadow:  0 10px 30px rgba(0,0,0,.1);
     transition: .4s;
+}
+
+.header-button .b1{
+    margin-right: 50px;
 }
 
 .cta:hover{

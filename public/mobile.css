@@ -1,10 +1,18 @@
-@media screen and (max-width: 375px){
+@media screen and (max-width: 414px){
     .navbar{
         display: none;   
     }
 
+    .nav-item{
+        display: block;
+    }
+
+    .nav-item i{
+        color: white;
+    }
+
     h1{
-        font-size: 39px;
+        font-size: 32px;
     }
 
     .punch-line{
@@ -68,6 +76,7 @@
 
     .accordion{
         width: 100%;
+        padding-left: 0px;
     }
 
     .accordion h3{

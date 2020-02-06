@@ -12,14 +12,21 @@
 </head>
 <body>
     <nav class="center">
-        <i class="fas fa-bars"></i>
         <span class="logo">WEMAKEWEB</span>
         <ul class="center navbar">
             <li>Accueil</li>
             <li>Les formations</li>
-            <li>La web team</li>
             <li>Contact</li>
         </ul>
+        <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Les formations</a>
+                <a class="dropdown-item" href="#">Contact</a>
+            </div>
+        </div>
     </nav>
     <div class="banner center">
         <div class="container">
@@ -37,7 +44,7 @@
                                 <li>Je me reconvertis</li>
                             </ul> -->
                             <div class="header-button">
-                                <button class="cta" style="margin-right: 50px;">Découvrez les formations</button>
+                                <button class="cta b1">Découvrez les formations</button>
                                 <button class="cta contact">Contactez-nous</button>
                             </div>
                     </div>
@@ -45,7 +52,7 @@
                 <div class="col-xs-12 col-sm-5 col-md-5 center">
                     <div class="right-bloc">
                         <img src="images/dev-group.jpg" width="100%" alt="">
-                        <button class="cta" style="margin-right: 50px;">Découvrez les formations</button>
+                        <button class="cta" style="">Découvrez les formations</button>
                         <!-- <div class="formation center">
                             2 jours : Objectif, faire un site one-page de photographe
                         </div>
@@ -301,7 +308,7 @@
                     </div> -->
             </div>
             
-            <textarea type="text" id="text" rows="6" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Des questions sur la formation..."></textarea>
+            <textarea type="text" id="text" rows="6" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Des questions sur les formations..."></textarea>
             <button type="submit" id="submit" class="btn btn-primary mb-2">Je demande des infos</button>
 
         </form>
