@@ -92,6 +92,11 @@ ul{
 
 .right-bloc img{
     box-shadow:  0 10px 30px rgba(0,0,0,.1);
+    border-radius: 20px;
+}
+
+.right-bloc .cta{
+    display: none;
 }
 
 .cta{
@@ -164,14 +169,20 @@ ul{
 
 .bloc3{
     background-color: #FAFAFA;
-    padding: 100px;
+    /* padding: 100px; */
     color: gray;
     text-align: center;
 }
 
 .bloc3 .container{
     vertical-align: center;
+}
 
+.bloc3 h2{
+    font-size: 40px; 
+    color: black; 
+    font-weight: bolder;
+    padding: 100px; 
 }
 
 .fa-arrow-down{
@@ -236,6 +247,7 @@ footer{
     width: 100%;
     border: none;
     border-radius: 20px;
+    transition: .4s;
 }
 
 .card img{
@@ -245,4 +257,11 @@ footer{
 
 .card a{
     background-color: #6B7DF1;
+}
+
+.card:hover{
+    background-color: white;
+    box-shadow:  0 10px 30px rgba(0,0,0,.1);
+    transition: .4s;
+
 }
