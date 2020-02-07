@@ -3,7 +3,7 @@
         display: none;   
     }
 
-    .nav-item{
+    .nav-item-xs{
         display: block;
     }
 
@@ -89,5 +89,9 @@
 
     footer{
         padding: 40px;
+    }
+
+    form{
+        width: 100%;
     }
 }

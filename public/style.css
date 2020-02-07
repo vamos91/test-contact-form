@@ -20,9 +20,10 @@ nav{
     transition: .4s;
 }
 
-.nav-item{
+.nav-item-xs{
     display: none;
 }
+
 
 li{
     list-style: none;
@@ -36,6 +37,53 @@ h1{
 
 ul{
     margin-top: 16px;
+}
+
+button{
+    border: none;
+}
+
+.navbar a{
+    color: white;
+    padding: 10px;
+}
+
+.navbar a:hover{
+    color: white;
+    text-decoration: none;
+    /* border-bottom-style: solid;
+    border-bottom-width: 2px; */
+}
+
+.dropdown-menu{
+    background-color: #6B7DF1;
+    box-shadow:  0 10px 30px rgba(0,0,0,.1);
+}
+
+.dropdown-menu p{
+    color: white;
+}
+
+.dropdown-item:hover{
+    background-color: #6B7DF1;
+    color: #06EDA4;
+}
+
+.totop{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    transition: .4s;
+}
+
+.totop:hover{
+    background-color: black;
+    border-top-left-radius: 20px;
+    transition: .4s;
 }
 
 .icone{
@@ -63,8 +111,11 @@ ul{
 
 .nav-scroll{
     background-color: white;
-    color: gray;
+    /* color: gray; */
     transition: .4s;
+    border: none;
+    box-shadow:  0 10px 30px rgba(0,0,0,.1);
+
 }
 
 .center{
@@ -175,6 +226,10 @@ ul{
 
 }
 
+.card img{
+    height: 236px;
+}
+
 .bloc3{
     background-color: #FAFAFA;
     /* padding: 100px; */
@@ -272,4 +327,16 @@ footer{
     box-shadow:  0 10px 30px rgba(0,0,0,.1);
     transition: .4s;
 
+}
+
+form{
+    width: 40%;
+}
+
+.form-inline .input-group{
+    width: 100%;
+}
+
+.add-modal{
+    display: block;
 }
