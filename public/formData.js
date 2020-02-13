@@ -20,12 +20,12 @@ button.addEventListener('click', (event) => {
 
     if(data.t.length === 0 || data.e.length === 0){
         // alert('Vous navez pas remplis un des formulaire');
-         modal.classList.add('show');
+        modal.classList.add('show');
         modal.style.display = 'block';
     }else{
         button.setAttribute('disabled', '');
         console.log(data);
-        fetch('https://limitless-sierra-16446.herokuapp.com/email', {
+        fetch('/email', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
@@ -34,10 +34,28 @@ button.addEventListener('click', (event) => {
         })
         .then(response => response.json())
         .then((dataFromServer) => {
-            console.log('Donnée reçus: ' + dataFromServer);
+            const result = JSON.stringify(dataFromServer.response)
+            const finalResult = result.substring(11, 13)
+            console.log('Donnée reçus: ' + result);
+            console.log(finalResult)
+            if(finalResult === 'OK'){
+                document.querySelector('.alert-primary').style.display = 'block';
+                email.value = '';
+                texte.value = '';
+                button.removeAttribute("disabled", "");
+                button.setAttribute('enabled', '');
+            }else{
+                document.querySelector('.alert-danger').style.display = 'block';
+                email.value = '';
+                texte.value = '';
+                button.removeAttribute("disabled", "");
+                button.setAttribute('enabled', '');
+            }
         })
         .catch((err) => {
-            console.log('Mon erreur' + err);
+            console.log('Mon erreur:' + ' ' + err);
         })
     }  
 });
+
+//'https://limitless-sierra-16446.herokuapp.com/email' ==> URL ajax

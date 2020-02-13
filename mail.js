@@ -33,7 +33,7 @@ transporter.verify(function(error, success) {
         });
       });
 
-const sendMail = (subject, email, text) => {
+const sendMail = async (subject, email, text) => {
     //step2
     const textBody = `From: ${email} et voici son message ${text}`;
     const htmlBody = `<h2>Mail from contact form: From: ${email}</h2><p>${text}</p>`
@@ -50,7 +50,9 @@ const sendMail = (subject, email, text) => {
         if(err){
             console.log('erreur', err)
         }else{
-            console.log('message sent')
+            console.log('message sent');
+            console.log(data);
+            return data;
         }
     });
 }
