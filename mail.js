@@ -7,15 +7,15 @@ let transporter = nodeMailer.createTransport({
     pool: true,
     service: 'gmail',
     auth: {
-        type: 'OAuth2',
+        //type: 'OAuth2',
         user: process.env.EMAIL,
         pass: process.env.PASSWORD,
-        accessToken: 'ya29.Il-8B_Wl3TIpXdVEJYD31uKLmt_S1zSVqYcyXi-Ep2NLj5s26DReaoyYY-_qw197YrI1Lamwn6YHG7dKV0Sun79MDYKvDkw8H_IswKym9JUlY8R4Qr-kOX9zKLIruO1YRg',
-        expires: 1234543635634524514 + 6000000,
-        refreshToken: process.env.EMAIL_REFRESH_TOKEN,
-        clientId: process.env.EMAIL_CLIENT_ID,
-        clientSecret: process.env.EMAIL_CLIENT_SECRET,
-        accessUrl: 'https://oauth2.googleapis.com/token'
+        // accessToken: 'ya29.Il-9B-dB4KfcQoX-2xaL2__98UxwCQ1UQemtwH2V8AMq2BtXx0f-aSMwapojyIpFsbhnyIOJbHsFZ1nTXPWDV590gejNCSNL9muDxD52ekwFKOy_Kdgh19ROVdP1tkmgDw',
+        // expires: 1234543635634524514 + 6000000,
+        // refreshToken: process.env.EMAIL_REFRESH_TOKEN,
+        // clientId: process.env.EMAIL_CLIENT_ID,
+        // clientSecret: process.env.EMAIL_CLIENT_SECRET,
+        // accessUrl: 'https://oauth2.googleapis.com/token'
     }
 });
 
@@ -40,7 +40,7 @@ const sendMail = (subject, email, text) => {
     const mailOptions = {
         from: email,
         to: 'acardnicolas91@gmail.com',
-        subject: subject,
+        // subject: subject,
         text: textBody,
         html: htmlBody
     };

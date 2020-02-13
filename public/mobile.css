@@ -54,6 +54,10 @@
         font-size: 8px;
     }
 
+    .text-bloc{
+        margin-bottom: -100px;
+    }
+
     .media-body h5{
         font-size: 16px;
     }
@@ -94,4 +98,32 @@
     form{
         width: 100%;
     }
+
+    .avatar{
+        flex-wrap: wrap;
+        justify-content: center;
+        display: flex;
+    }
+
+    .presentation ul{
+        line-height: 2;
+    }
+
+    .presentation img{
+       display: none;
+    }
+
+    .presentation span{
+        font-size: 12px;
+        font-weight: 100;
+    }
+
+    .setup-dev{
+        margin-bottom: -200px;
+    }
+
+    .avatar{
+        margin-top: 100px;
+    }
+    
 }
