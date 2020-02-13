@@ -40,7 +40,7 @@ const sendMail = (subject, email, text) => {
     const mailOptions = {
         from: email,
         to: 'acardnicolas91@gmail.com',
-        // subject: subject,
+        subject: 'Message de wemakeweb !',
         text: textBody,
         html: htmlBody
     };
