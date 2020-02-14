@@ -38,20 +38,6 @@ let transporter = nodeMailer.createTransport({
     }
 });
 
-transporter.verify(function(error, success) {
-        if (error) {
-          console.log(error);
-        } else {
-          console.log("Server is ready to take our messages");
-        }
-        transporter.on('token', token => {
-            console.log('A new access token was generated');
-            console.log('User: %s', token.user);
-            console.log('Access Token: %s', token.accessToken);
-            console.log('Expires: %s', new Date(token.expires));
-        });
-      });
-
 const sendMail = (email, text) => {
     //step2
     const textBody = `From: ${email} et voici son message ${text}`;
