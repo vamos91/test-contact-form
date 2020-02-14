@@ -21,15 +21,24 @@ app.get('/', (req, res) => {
 app.post('/email', (req, res) => {
     console.log(req.body.data)
     //sendMail(req.body.data.e, req.body.data.t)
-    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-    const msg = {
-    to: 'acardnicolas91@gmail.com',
-    from: req.body.data.e,
-    subject: 'Sending with Twilio SendGrid is Fun',
-    text: req.body.data.t,
-    // html: '<strong>and easy to do anywhere, even with Node.js</strong>',
-    };
-    sgMail.send(msg);
+    const sendMail = () => {
+        sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+        const msg = {
+        to: 'acardnicolas91@gmail.com',
+        from: req.body.data.e,
+        subject: 'Message de wemakeweb',
+        text: req.body.data.t,
+        // html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+        };
+        sgMail.send(msg, (err, data) => {
+            if(!err){
+                res.json(data);
+            }   
+        });
+    }
+    sendMail(req.body.data.e, req.body.data.t);
+    
+    
 })
 
 app.listen(port, () => {

@@ -34,16 +34,13 @@ button.addEventListener('click', (event) => {
         })
         .then(response => response.json())
         .then((dataFromServer) => {
-            const result = JSON.stringify(dataFromServer.response)
-            const finalResult = result.substring(11, 13)
-            console.log('Donnée reçus: ' + result);
-            console.log(finalResult)
-            if(finalResult === 'OK'){
+            const result = dataFromServer[0].statusCode;
+            if(result === 202){
                 document.querySelector('.alert-primary').style.display = 'block';
                 email.value = '';
                 texte.value = '';
                 button.removeAttribute("disabled", "");
-                button.setAttribute('enabled', '');
+            button.setAttribute('enabled', '');
             }else{
                 document.querySelector('.alert-danger').style.display = 'block';
                 email.value = '';
