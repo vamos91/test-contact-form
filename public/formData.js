@@ -25,7 +25,7 @@ button.addEventListener('click', (event) => {
     }else{
         button.setAttribute('disabled', '');
         console.log(data);
-        fetch('https://limitless-sierra-16446.herokuapp.com/email', {
+        fetch('/email', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
