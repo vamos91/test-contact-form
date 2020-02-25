@@ -66,7 +66,13 @@ arrayOfCard.forEach((card) => {
     });
 });
 
-
 //-------------------------------------------
 
+const chatHeader = document.querySelector('.chat .title');
+const chatBox = document.querySelector('.chat');
+const openIcon = document.querySelector('.title .fas');
 
+chatHeader.addEventListener('click', (event) => {
+    chatBox.classList.toggle('chat-open');
+    openIcon.classList.toggle('fa-times')
+});

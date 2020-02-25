@@ -38,6 +38,47 @@
                 <a class="dropdown-item" href="#">Je m'inscris maintenant</a>
             </div>
         </div>
+        <div class="chat">
+            <div class="title">
+                    <img src="images/moi.jpg" class="avatar" alt="">
+                    <img src="images/mika.png" class="avatar" alt="" style="margin-left: -8px; margin-right: 10px;">
+                <h3>Live tchat: Offline</h3>
+                <i class="fas fa-angle-up center"></i>
+                <!-- <i class="fas fa-times"></i> -->
+            </div>
+            <div class="body-chat">
+                <div class="message-chat-intro">Bonjour, veuillez laisser votre email pour pouvoir vous contacter rapidement, merci.</div>
+                <div class="message-chat-intro">
+                    <form class="">
+                            <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
+                            <div class="input-group mb-2 mr-sm-2">
+                                <div class="input-group-prepend">
+                                </div>
+                                <input type="text" id="chat-email" class="form-control" id="inlineFormInputGroupUsername2" placeholder="E-mail">
+                            </div>
+                            <div class="input-group mb-2 mr-sm-2">
+                                <div class="input-group-prepend">
+                                </div>
+                                <input type="text" id="chat-nom" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Nom">
+                            </div>
+                            <label class="sr-only" for="inlineFormInputName2">Name</label>
+                        <button type="submit" id="chat-submit" class="btn btn-primary mb-2">OK</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+            <strong>Message envoyé !</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>OUPS, une erreur est survenue lors de l'envoie du message!</strong> Contacter le développeur à acardnicolas91@gmail.com
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
     </nav>
     <div class="banner center">
         <div class="totop">
@@ -47,7 +88,7 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-7 col-md-7 center">
                     <div class="left-bloc ">
-                        <div><h1><span style="font-weight: lighter; text-decoration: underline;">Apprenez</span> à coder</h1></div>
+                        <div><h1><span style="font-weight: lighter; text-decoration: underline;">J'apprends</span> à coder</h1></div>
                         <div class="punch-line">Je développe mon site de A à Z !</div>
                         <p>Envie de reconversion... de changer de vie... Nous vous enseignons les compétences essentielles en HTML, CSS et JAVASCRIPT pour travailler de chez vous, gagner en <strong>indépendance et en liberté</strong>, ou encore changer de poste dans votre entreprise.</p>
                             <div class="header-button">
@@ -364,30 +405,7 @@
         </div>
     </div>
 </div>
-
-
-
-  
-
-    <!-- <form>
-        <input type="text" id="sujet" placeholder="sujet"><br>
-        <input type="text" id="email" placeholder="email"><br>
-        <textarea type="text" id="text" cols="30" rows="10" placeholder="texte"></textarea>
-        <input type="submit" id="submit">
-    </form> -->
-    <!-- <script src="/public/formData.js"></script> -->
-    <div class="alert alert-primary alert-dismissible fade show" role="alert">
-        <strong>Message envoyé !</strong>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <strong>OUPS, une erreur est survenue lors de l'envoie du message!</strong> Contacter le développeur à acardnicolas91@gmail.com
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
+    
     <footer class="center">
         <form class="">
             <div class="form-inline">
@@ -399,13 +417,6 @@
                         <input type="text" id="email" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Votre email">
                     </div>
                     <label class="sr-only" for="inlineFormInputName2">Name</label>
-                    <!-- <input type="text" id="sujet" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Sujet"> -->
-                    <!-- <div class="form-check mb-2 mr-sm-2">
-                        <input class="form-check-input" type="checkbox" id="inlineFormCheck">
-                        <label class="form-check-label" for="inlineFormCheck">
-                        Remember me
-                        </label>
-                    </div> -->
             </div>
             
             <textarea type="text" id="text" rows="6" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Je choisis une formation."></textarea>

@@ -331,7 +331,7 @@ footer{
 .categorie{
     position: absolute;
     top: 0px;
-    text-align: center
+    text-align: center;
     width: 50%;
     padding: 10px;
     background-color: rgba(255,255, 255, 0.9);
@@ -452,7 +452,93 @@ form{
 }
 
 .alert{
+    position: fixed;
+    right: 0px;
     display: none;
-    width: 50%;
+    width: 25%;
     margin: auto;
+}
+
+.chat{
+    position: fixed;
+    right: 70px;
+    bottom: 0px; 
+    height: 55px;
+    box-shadow:  0 10px 30px rgba(0,0,0,.1);
+    transition: .4s;
+}
+
+.chat-open{
+    height: 450px;
+    transition: .4s;
+}
+
+.chat .title{
+    background-color: #06EDA4;
+    padding: 15px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.chat .title:hover{
+    cursor: grab;
+}
+
+.chat .title h3{
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.chat .body-chat{
+    width: 300px;
+    background-color: #6B7DF1;
+    font-size: 12px;
+    font-weight: lighter;
+    color: black;
+    padding: 40px;
+}
+
+.chat .body-chat form{
+    width: 100%;
+}
+
+.chat .body-chat .message-chat-intro{
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    box-shadow:  0 10px 30px rgba(0,0,0,.1);   
+}
+
+.body-chat input{
+    font-size: 12px;
+    border-radius: 20px;
+}
+
+.body-chat #chat-submit{
+    font-size: 12px;
+    width: 100%;
+    margin-top: 50px;
+    border-radius: 20px;
+}
+
+.avatar{
+    width: 30px;
+    border-radius: 50%;
+}
+
+.title .fas{
+    position: absolute;
+    right: 20px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.title .fas:hover{
+    background-color: rgb(98, 250, 202);
+    box-shadow:  0 10px 30px rgba(0,0,0,.1); 
+    transition: .4s;
 }
