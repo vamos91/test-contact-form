@@ -88,7 +88,7 @@ button{
 
 .icone{
     font-size: 60px;
-    color: #06EDA4; 
+    color: #06EDA4;
 }
 
 .text-gradient{
@@ -139,7 +139,7 @@ button{
 }
 
 .banner{
-    background-image: linear-gradient(90deg, rgba(27,231,169,0.9) 0%, rgba(102,137,235,0.9) 100%), url("/images/banner.jpg"); 
+    background-image: linear-gradient(90deg, rgba(27,231,169,0.9) 0%, rgba(102,137,235,0.9) 100%), url("/images/banner.jpg");
     background-size: cover;
     background-position: center;
     position: relative;
@@ -215,7 +215,7 @@ button{
 }
 
 .accordion{
-    width: 40%;
+    width: 80%;
     padding-left: 30px;
 }
 
@@ -249,10 +249,10 @@ button{
 }
 
 .bloc3 h2{
-    font-size: 40px; 
-    color: black; 
+    font-size: 40px;
+    color: black;
     font-weight: bolder;
-    padding: 100px; 
+    padding: 100px;
 }
 
 .bloc3 .fas{
@@ -428,7 +428,7 @@ form{
 
 .setup-dev{
     text-align: center;
-    color: black;    
+    color: black;
 }
 
 .presentation ul{
@@ -462,7 +462,7 @@ form{
 .chat{
     position: fixed;
     right: 70px;
-    bottom: 0px; 
+    bottom: 0px;
     height: 55px;
     box-shadow:  0 10px 30px rgba(0,0,0,.1);
     transition: .4s;
@@ -509,7 +509,7 @@ form{
     padding: 20px;
     border-radius: 20px;
     margin-bottom: 10px;
-    box-shadow:  0 10px 30px rgba(0,0,0,.1);   
+    box-shadow:  0 10px 30px rgba(0,0,0,.1);
 }
 
 .body-chat input{
@@ -539,6 +539,10 @@ form{
 
 .title .fas:hover{
     background-color: rgb(98, 250, 202);
-    box-shadow:  0 10px 30px rgba(0,0,0,.1); 
+    box-shadow:  0 10px 30px rgba(0,0,0,.1);
     transition: .4s;
+}
+
+.details{
+  display: flex;
 }
