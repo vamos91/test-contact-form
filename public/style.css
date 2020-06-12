@@ -358,6 +358,10 @@ form{
     width: 40%;
 }
 
+.form-inline{
+  display: block;
+}
+
 .form-inline .input-group{
     width: 100%;
 }

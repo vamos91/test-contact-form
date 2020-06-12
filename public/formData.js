@@ -8,6 +8,9 @@ const chatButton = document.querySelector('#chat-submit');
 const modal = document.querySelector('.modal');
 const modalButton = document.querySelector('.modal-footer button');
 
+const x = 'test1';
+const y = 'test2';
+
 modalButton.addEventListener('click', (event) => {
     event.preventDefault();
     modal.classList.remove('show');
@@ -15,19 +18,20 @@ modalButton.addEventListener('click', (event) => {
 
 
 const sendMail = (event) => {
-    event.preventDefault();
+     //event.preventDefault();
     if(email.value.length !== 0){
         mail = email.value;
     }else{
         mail = chatEmail.value;
     }
-    
+
     if(texte.value.length !== 0){
         content = texte.value;
     }else{
         content = chatNom.value;
     }
-    
+
+
     const data = {
         e: mail,
         t: content
@@ -56,7 +60,7 @@ const sendMail = (event) => {
                 chatEmail.value = '';
                 chatNom.value = '';
                 button.removeAttribute("disabled", "");
-            button.setAttribute('enabled', '');
+                button.setAttribute('enabled', '');
             }else{
                 document.querySelector('.alert-danger').style.display = 'block';
                 email.value = '';
@@ -70,7 +74,7 @@ const sendMail = (event) => {
         .catch((err) => {
             console.log('Mon erreur:' + ' ' + err);
         })
-    }  
+    }
 }
 
 
