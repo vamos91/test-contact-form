@@ -16,7 +16,7 @@ nav{
     height: 10vh;
     font-weight: bolder;
     z-index: 1000;
-    border-bottom: 1px solid rgb(131,58,180, 0.4);
+    border-bottom: 1px solid rgba(0,0,0, 0.1);
     transition: .4s;
 }
 
@@ -41,6 +41,11 @@ ul{
 
 button{
     border: none;
+}
+
+.logo{
+  color: gray;
+  font-size: 24px;
 }
 
 .navbar a{
@@ -132,6 +137,7 @@ button{
 .punch-line{
     font-size: 32px;
     margin-bottom: 10px;
+    padding-right: 100px;
 }
 
 .left-bloc p{
@@ -139,14 +145,14 @@ button{
 }
 
 .banner{
-    background-image: linear-gradient(90deg, rgba(27,231,169,0.9) 0%, rgba(102,137,235,0.9) 100%), url("/images/banner.jpg");
+    background-image: linear-gradient(90deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.9) 100%), url("/images/banner.jpg");
     background-size: cover;
     background-position: center;
     position: relative;
     /* background: rgba(131,58,180); */
     /* background: linear-gradient(90deg, rgba(131,58,180,0.5) 0%, rgba(253,29,29,0.5) 50%, rgba(252,176,69,0.5) 100%); */
     height: 100vh;
-    color: white;
+    color: gray;
     text-align: justify;
 }
 
@@ -199,13 +205,13 @@ button{
 }
 
 .bloc2{
-    background-image: linear-gradient(90deg, rgba(255,255,255) 40%, rgba(252,176,69,0) 100%), url("/images/dev-freelance.jpg");
+    background-image: linear-gradient(90deg, rgba(255,255,255) 65%, rgba(252,176,69,0) 100%), url("/images/dev-freelance.jpg");
     background-size: cover;
     background-position: center;
     height: 100vh;
     display: flex;
     align-items: center;
-    color: #222222;
+    color: gray;
 }
 
 .bloc2 h3{
@@ -262,7 +268,7 @@ button{
 }
 
 .fa-arrow-down{
-    margin: 20px auto;
+    margin: 0px auto;
     width: 100%;
 }
 
@@ -270,9 +276,9 @@ button{
     color: gray;
     /* padding: 50px; */
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 0px;
     width: 70%;
-    margin: 20px auto;
+    margin: 0px auto;
     text-align: justify;
 }
 
@@ -301,14 +307,16 @@ button{
     width: 125px;
 }
 
-footer{
-    background-color: #6B7DF1;
+/*footer{
+    background-color: #F7F7F7;
     height: 50vh;
-}
+}*/
 
 #submit{
-    background-color: rgb(27,231,169);
-    border: 1px solid rgb(27,231,169);
+    /*background-color: rgb(27,231,169);*/
+    background-color: #6B7DF1;
+    /*border: 1px solid rgb(27,231,169);*/
+    border: none;
 }
 
 .contact{
@@ -330,7 +338,8 @@ footer{
 
 .categorie{
     position: absolute;
-    top: 0px;
+    top: 5px;
+    left: 5px;
     text-align: center;
     width: 50%;
     padding: 10px;
@@ -549,4 +558,80 @@ form{
 
 .details{
   display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Sticky footer position and size
+-------------------------------------------------- */
+
+.footer {
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 400px;
+}
+
+/* Taller footer on small screens */
+@media (max-width: 34em) {
+    body {
+      margin-bottom: 500px;
+    }
+    .footer {
+      height: 500px;
+    }
+}
+
+/* Sticky footer style and color
+-------------------------------------------------- */
+footer {
+  padding-top: 100px;
+  background-color: #F7F7F7;
+  color: #bbb;
+}
+
+#contact-form-footer{
+  width: 100%;
+}
+
+footer a {
+  color: #999;
+  text-decoration:none;
+}
+
+footer a:hover, footer a:focus {
+  color: #aaa;
+  text-decoration:none;
+  border-bottom:1px dotted #999;
+}
+
+footer .form-control {
+    background-color: white;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    border: none;
+    resize: none;
+    color: #d1d2d2;
+    padding: 0.7em 1em;
+}
+
+footer p{
+  text-align: justify;
+  padding-right: 30px;
+}
+
+.submit-contact-form{
+  background-color: #6B7DF1;
 }

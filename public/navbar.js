@@ -76,3 +76,14 @@ chatHeader.addEventListener('click', (event) => {
     chatBox.classList.toggle('chat-open');
     openIcon.classList.toggle('fa-times')
 });
+
+const autoOpen = () => {
+  chatBox.classList.toggle('chat-open');
+  openIcon.classList.toggle('fa-times')
+};
+
+
+setTimeout(autoOpen, 3000);
+
+
+
