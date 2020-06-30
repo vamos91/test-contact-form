@@ -8,7 +8,6 @@ const toFormation = document.querySelector('.header-button .b1');
 const arrayOfLink = document.querySelectorAll('.dropdown-menu a');
 const arrayOfCard = document.querySelectorAll('.card-body a');
 
-
 window.addEventListener('scroll', (event) => {
     if(window.scrollY > 50){
         nav.classList.add('nav-scroll');

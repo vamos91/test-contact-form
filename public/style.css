@@ -239,10 +239,15 @@ button{
     background: linear-gradient(90deg, rgba(27,231,169,1) 0%, rgba(102,137,235,1) 100%);
 }
 
-.card-button{
+.button{
     padding: 10px;
     /* box-shadow:  0 10px 30px rgba(0,0,0,.1); */
 
+}
+
+.card .détails{
+
+  color: gray;
 }
 
 .card img{
@@ -563,9 +568,13 @@ form{
 }
 
 .details{
-  display: flex;
+  padding: 0;
+  color: gray;
 }
 
+.details i{
+  margin-right: 5px;
+}
 
 
 

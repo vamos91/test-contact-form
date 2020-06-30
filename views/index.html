@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Formation développement web Aix-en-Provence - Marseille</title>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://kit.fontawesome.com/d4359d411c.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mobile.css">
@@ -87,7 +89,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-7 col-md-7 center">
-                    <div class="left-bloc ">
+                    <div class="left-bloc">
                         <div><h1><span style="font-weight: lighter; text-decoration: underline;">J'apprends</span> à coder</h1></div>
                         <div class="punch-line">Je gagne en indépendance et en liberté !</div>
                         <p>Envie de reconversion... de changer de vie... Nous vous enseignons les compétences essentielles en HTML, CSS et JAVASCRIPT pour travailler de chez vous, gagner en <strong>indépendance et en liberté</strong>, ou encore changer de poste dans votre entreprise.</p>
@@ -99,7 +101,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-5 col-md-5 center">
                     <div class="right-bloc">
-                      <div class="card">
+                      <div class="card top-card">
                           <div class="categorie">Formation à la une.</div>
                           <img src="images/dev-group2.jpg" class="card-img-top" alt="...">
                           <div class="card-body">
@@ -231,7 +233,11 @@
                                     <h5 class="card-title"><strong>HTML5 - CSS3: Les bases</strong></h5>
                                     <hr>
                                     <p>Je code un site one-page de type CV en ligne</p>
-                                    <p class="card-text">Durée de la formation: 2 jours</p>
+                                   <ul class="details">
+                                      <li><i class="far fa-clock"> </i>  2 jours</li>
+                                      <li><i class="fas fa-users"> </i>  Tout public</li>
+                                      <li><i class="fas fa-euro-sign"> </i>  700</li>
+                                  </ul>
                                     <hr>
                                     <p><i>Aucun pré-requis</i></p>
                                     <a href="#" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Je m'inscris</a>
@@ -246,7 +252,11 @@
                                     <h5 class="card-title"><strong>HTML5 - CSS3: On va plus loin</strong></h5>
                                     <hr>
                                     <p>Je code un site one-page de type AirBnB</p>
-                                    <p class="card-text">Durée de la formation: 3 jours</p>
+                                    <ul class="details">
+                                      <li><i class="far fa-clock"> </i>  3 jours</li>
+                                      <li><i class="fas fa-users"> </i>  Tout public</li>
+                                      <li><i class="fas fa-euro-sign"> </i>  1100</li>
+                                  </ul>
                                     <hr>
                                     <p><i>Aucun pré-requis</i></p>
                                     <a href="#" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Je m'inscris</a>
@@ -261,7 +271,11 @@
                                     <h5 class="card-title"><strong>JAVASCRIPT: Les bases</strong></h5>
                                     <hr>
                                     <p>Je crée une interface web dynamique type oui.sncf</p>
-                                    <p class="card-text">Durée de la formation: 4 jours</p>
+                                    <ul class="details">
+                                        <li><i class="far fa-clock"> </i>  4 jours</li>
+                                        <li><i class="fas fa-users"> </i>  Tout public</li>
+                                        <li><i class="fas fa-euro-sign"> </i>  1400</li>
+                                    </ul>
                                     <hr>
                                     <p><i>Pré-requis: Les bases HTML/CSS</i></p>
                                     <a href="#" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Je m'inscris</a>
@@ -276,7 +290,11 @@
                                     <h5 class="card-title"><strong>HTML - CSS - JAVASCRIPT</strong></h5>
                                     <hr>
                                     <p>Je crée une interface web de boutique en ligne</p>
-                                    <p class="card-text">Durée de la formation: 5 jours</p>
+                                    <ul class="details">
+                                        <li><i class="far fa-clock"> </i>  5 jours</li>
+                                        <li><i class="fas fa-users"> </i>  Tout public</li>
+                                        <li><i class="fas fa-euro-sign"> </i>  1750</li>
+                                    </ul>
                                     <hr>
                                     <p><i>Pré-requis: Les bases HTML/CSS</i></p>
                                     <a href="#" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Je m'inscris</a>
@@ -531,7 +549,7 @@
                         <input type="email" class="form-control" id="email" placeholder="Votre email">
                     </fieldset>
                     <fieldset class="form-group">
-                        <textarea class="form-control" id="text" rows="5" placeholder="Vous avez des questions..."></textarea>
+                        <textarea class="form-control" id="text" rows="5" placeholder="J'aimerai connaitre les dates de vos prochaines formations."></textarea>
                     </fieldset>
                     <fieldset class="form-group text-xs-right">
                         <button type="button" id="submit" class="btn btn-primary btn-lg">J'apprends à coder</button>
@@ -578,9 +596,10 @@
             </div>
         </div>
     </div>
+<script src="scroll-reveal.js"></script>
 <script src="navbar.js"></script>
 <script src="formData.js"></script>
-
+<script src="fill-form.js"></script>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCdcrwCTRbeNmrQP_5m6uApSo5jiWe-MP8"></script>
 <script type="text/javascript" src="map.js"></script>
