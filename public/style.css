@@ -18,10 +18,19 @@ nav{
     z-index: 1000;
     border-bottom: 1px solid rgba(0,0,0, 0.1);
     transition: .4s;
+    background-color: white;
 }
 
 .nav-item-xs{
     display: none;
+}
+
+#navbarDropdown{
+  padding: 15px;
+  border-radius: 5px;
+  background-color: white;
+  color: gray;
+  border: 1px solid #6B7DF1;
 }
 
 
@@ -44,12 +53,14 @@ button{
 }
 
 .logo{
+  display: flex;
+  flex: 1;
   color: gray;
   font-size: 24px;
 }
 
 .navbar a{
-    color: white;
+    color: gray;
     padding: 10px;
 }
 
@@ -61,17 +72,17 @@ button{
 }
 
 .dropdown-menu{
-    background-color: #6B7DF1;
+    background-color: white;
     box-shadow:  0 10px 30px rgba(0,0,0,.1);
 }
 
 .dropdown-menu p{
-    color: white;
+    color: gray;
 }
 
 .dropdown-item:hover{
     background-color: #6B7DF1;
-    color: #06EDA4;
+    color: gray;
 }
 
 .totop{
@@ -127,11 +138,6 @@ button{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.logo{
-    position: absolute;
-    left: 20px;
 }
 
 .punch-line{
@@ -506,7 +512,7 @@ form{
 
 .chat .body-chat{
     width: 300px;
-    background-color: #6B7DF1;
+    background-color: white;
     font-size: 12px;
     font-weight: lighter;
     color: black;
