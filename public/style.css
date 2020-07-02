@@ -359,6 +359,11 @@ button{
     color: gray;
 }
 
+.top-card .categorie{
+    background-color: red;
+    color: white;
+}
+
 .card img{
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
