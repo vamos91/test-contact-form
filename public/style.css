@@ -380,7 +380,7 @@ button{
 }
 
 form{
-    width: 40%;
+    /* width: 40%; */
 }
 
 .form-inline{
@@ -581,11 +581,33 @@ form{
   margin-right: 5px;
 }
 
+.newsletter{
+    color: white;
+    width: 100%;
+    padding: 100px;
+    text-align: center;
+    background: linear-gradient(90deg, rgba(27,231,169,1) 0%, rgba(102,137,235,1) 100%);
+}
 
+.newsletter h2{
+    font-weight: bold;
+}
 
+.newsletter form{
+    width: 60%;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    margin: auto;
+}
 
+#newsletter-input{
+    width: 300px;
+}
 
-
+.newsletter p{
+    padding-bottom: 30px;
+}
 
 
 

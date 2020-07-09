@@ -40,7 +40,7 @@ const sendMail = async (subject, email, text) => {
     const mailOptions = {
         from: email,
         to: 'acardnicolas91@gmail.com',
-        subject: 'Message de wemakeweb !',
+        subject: 'Message de oui-makeweb !',
         text: textBody,
         html: htmlBody
     };
