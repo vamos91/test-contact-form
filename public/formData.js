@@ -8,6 +8,10 @@ const chatButton = document.querySelector('#chat-submit');
 const modal = document.querySelector('.modal');
 const modalButton = document.querySelector('.modal-footer button');
 
+const pdfButton = document.querySelector('#newsletter-button');
+const pdfInput = document.querySelector('#newsletter-input');
+
+let form = '';
 const x = 'test1';
 const y = 'test2';
 
@@ -19,19 +23,31 @@ modalButton.addEventListener('click', (event) => {
 
 const sendMail = (event) => {
      //event.preventDefault();
-    if(email.value.length !== 0){
+    if (email.value.length !== 0 && texte.value.length !== 0){
         mail = email.value;
-    }else{
-        mail = chatEmail.value;
+        content = texte.value;
+        form = 'formFooter';
+        email.value = '';
+        texte.value = '';
     }
 
-    if(texte.value.length !== 0){
-        content = texte.value;
-    }else{
+    if(chatEmail.value.length !== 0 && chatNom.value.length !== 0){
+        mail = chatEmail.value;
         content = chatNom.value;
+        form = 'chat';
+        chatEmail.value = '';
+        chatNom.value = '';
+    }
+
+    if (pdfInput.value.length !== 0) {
+        mail = pdfInput.value;
+        content = 'url vers pdf';
+        form = 'pdf';
+        pdfInput.value = '';
     }
 
     const data = {
+        from: form,
         e: mail,
         t: content
     }
@@ -52,7 +68,10 @@ const sendMail = (event) => {
         .then(response => response.json())
         .then((dataFromServer) => {
             const result = dataFromServer[0].statusCode;
+            console.log(result);
             if(result === 202){
+                //va t on ici ???
+                console.log('on rentre dans une 202');
                 document.querySelector('.alert-primary').style.display = 'block';
                 email.value = '';
                 texte.value = '';
@@ -76,7 +95,7 @@ const sendMail = (event) => {
     }
 }
 
-
+pdfButton.addEventListener('click', sendMail);
 button.addEventListener('click', sendMail);
 chatButton.addEventListener('click', sendMail);
 

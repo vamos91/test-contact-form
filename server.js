@@ -19,46 +19,66 @@ app.get('/', (req, res) => {
 });
 
 app.post('/email', (req, res) => {
-    console.log(req.body.data)
+    console.log(req.body.data.from)
     //sendMail(req.body.data.e, req.body.data.t)
     const sendMail = () => {
         sgMail.setApiKey(process.env.SENDGRID_API_KEY);
         const msg = {
-        to: 'acardnicolas91@gmail.com',
-        from: req.body.data.e,
-        subject: 'Message de wemakeweb',
-        text: req.body.data.t,
-        // html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+            to: 'acardnicolas91@gmail.com',
+            from: req.body.data.e,
+            subject: 'Message de oui-makeweb',
+            text: req.body.data.t,
+            // html: '<strong>and easy to do anywhere, even with Node.js</strong>',
         };
-        sgMail.send(msg, (err, data) => {
-            if(!err){
-                res.json(data);
-            }   
-        });
-    }
-    sendMail(req.body.data.e, req.body.data.t);   
-})
 
-app.post('/send-pdf', (req, res) => {
-    console.log(req.body.data.e)
-    //sendMail(req.body.data.e, req.body.data.t)
-    const sendPDF = () => {
-        sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-        const msg = {
+        const msg_from_pdf = {
             to: req.body.data.e,
             from: 'oui-makeweb',
             subject: 'Message de oui-makeweb',
-            text: 'Voici votre pdf',
-            // html: '<strong>and easy to do anywhere, even with Node.js</strong>',
-        };
-        sgMail.send(msg, (err, data) => {
-            if (!err) {
-                res.json(data);
-            }
-        });
+            text: 'path to pdf url',
+        // html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+        }
+        if (req.body.data.from === 'pdf'){
+            sgMail.send(msg_from_pdf, (err, data) => {
+                if (!err) {
+                    res.json(data);
+                }
+            });
+        }else{
+            sgMail.send(msg, (err, data) => {
+                if (!err) {
+                    res.json(data);
+                }
+            });
+        }
+        
     }
-    sendPDF(req.body.data.e);
+    sendMail(req.body.data.e, req.body.data.t, req.body.data.from);   
 })
+
+// app.post('/sendpdf', (req, res) => {
+//     console.log(req.body.data.e)
+//     //sendMail(req.body.data.e, req.body.data.t)
+//     const sendPDF = (mail) => {
+//         console.log(mail + ' ' +'est bien passé en paramètre');
+//         sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+//         const msg = {
+//             to: mail,
+//             from: 'oui-makeweb',
+//             subject: 'Message de oui-makeweb',
+//             text: 'Voici votre pdf',
+//             // html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+//         };
+//         sgMail.send(msg, (err, data) => {
+//             if (!err) {
+//                 res.json(data);
+//             }else{
+//                 console.log('message erreur:' + '' + err.message);
+//             }
+//         });
+//     }
+//     sendPDF(req.body.data.e);
+// })
 
 app.listen(port, () => {
     console.log(`App listen at http://localhost:${port}`);
