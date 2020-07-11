@@ -36,9 +36,28 @@ app.post('/email', (req, res) => {
             }   
         });
     }
-    sendMail(req.body.data.e, req.body.data.t);
-    
-    
+    sendMail(req.body.data.e, req.body.data.t);   
+})
+
+app.post('/send-pdf', (req, res) => {
+    console.log(req.body.data.e)
+    //sendMail(req.body.data.e, req.body.data.t)
+    const sendPDF = () => {
+        sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+        const msg = {
+            to: req.body.data.e,
+            from: 'oui-makeweb',
+            subject: 'Message de oui-makeweb',
+            text: 'Voici votre pdf',
+            // html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+        };
+        sgMail.send(msg, (err, data) => {
+            if (!err) {
+                res.json(data);
+            }
+        });
+    }
+    sendPDF(req.body.data.e);
 })
 
 app.listen(port, () => {

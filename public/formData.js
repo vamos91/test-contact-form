@@ -31,7 +31,6 @@ const sendMail = (event) => {
         content = chatNom.value;
     }
 
-
     const data = {
         e: mail,
         t: content
@@ -82,35 +81,3 @@ button.addEventListener('click', sendMail);
 chatButton.addEventListener('click', sendMail);
 
 //'https://limitless-sierra-16446.herokuapp.com/email' ==> URL ajax
-
-
-// const download_request = (event) => {
-//     event.preventDefault();
-//     if (newsletterInput.value.length !== 0) {
-//         alert(newsletterInput.value)
-//         const email = newsletterInput.value;
-//         const content = "demande d'upload";
-//         const data = {
-//             e: email,
-//             t: content
-//         }
-//         newsletterButton.setAttribute('disabled', '');
-//         fetch('/email', {
-//             method: 'POST',
-//             headers: {
-//                 "Content-Type": "application/json"
-//             },
-//             body: JSON.stringify({ data })
-//         })
-//         .then(response => response.json())
-//         .then((dataFromServer) => {
-//             console.log(dataFromServer);
-//         })
-//     } else {
-//         //message d'erreur
-//         content = chatNom.value;
-//     }
-// };
-
-
-//newsletterButton.addEventListener('click', download_request);

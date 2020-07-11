@@ -57,7 +57,31 @@ const sendMail = async (subject, email, text) => {
     });
 }
 
-module.exports = sendMail;
+const sendMailWithPDF = async (subject, email, text) => {
+    //step2
+    const textBody = `From: oui-makeweb`;
+    const htmlBody = `<h2>Mail to receive PDF</p>`
+    const mailOptions = {
+        from: 'oui-makeweb',
+        to: email,
+        subject: 'Message de oui-makeweb !',
+        text: textBody,
+        html: htmlBody
+    };
+
+    //step 3
+    transporter.sendMailWithPDF(mailOptions, (err, data) => {
+        if (err) {
+            console.log('erreur', err)
+        } else {
+            console.log('message sent');
+            console.log(data);
+            return data;
+        }
+    });
+}
+
+module.exports = { sendMail, sendMailWithPDF };
 
 
 
