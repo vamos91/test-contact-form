@@ -12,6 +12,8 @@ const pdfButton = document.querySelector('#newsletter-button');
 const pdfInput = document.querySelector('#newsletter-input');
 
 let form = '';
+let mail = '';
+let content = '';
 const x = 'test1';
 const y = 'test2';
 
@@ -22,7 +24,7 @@ modalButton.addEventListener('click', (event) => {
 
 
 const sendMail = (event) => {
-     //event.preventDefault();
+     event.preventDefault();
     if (email.value.length !== 0 && texte.value.length !== 0){
         mail = email.value;
         content = texte.value;
@@ -51,13 +53,13 @@ const sendMail = (event) => {
         e: mail,
         t: content
     }
-
+    console.log(data);
     if(data.t.length === 0 || data.e.length === 0){
         modal.classList.add('show');
         modal.style.display = 'block';
     }else{
-        button.setAttribute('disabled', '');
-        console.log(data);
+        //button.setAttribute('disabled', '');
+        
         fetch('/email', {
             method: 'POST',
             headers: {
