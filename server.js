@@ -31,7 +31,7 @@ app.post('/email', (req, res) => {
         };
 
         const msg_from_pdf = {
-            to: mail,
+            to: 'acardnicolas91@gmail.com',
             from: 'oui-makeweb',
             subject: 'Message de oui-makeweb',
             text: content,
