@@ -19,7 +19,6 @@ app.get('/', (req, res) => {
 });
 
 app.post('/email', (req, res) => {
-    
     //sendMail(req.body.data.e, req.body.data.t)
     const sendMail = (mail, content, from) => {
         sgMail.setApiKey(process.env.SENDGRID_API_KEY);
@@ -35,7 +34,7 @@ app.post('/email', (req, res) => {
             to: mail,
             from: 'oui-makeweb',
             subject: 'Message de oui-makeweb',
-            text: 'path to pdf url',
+            text: content,
         // html: '<strong>and easy to do anywhere, even with Node.js</strong>',
         }
         if (from === 'pdf'){

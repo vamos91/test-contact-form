@@ -69,6 +69,7 @@ const sendMail = (event) => {
         })
         .then(response => response.json())
         .then((dataFromServer) => {
+            console.log(dataFromServer);
             const result = dataFromServer[0].statusCode;
             console.log(result);
             if(result === 202){
@@ -97,7 +98,40 @@ const sendMail = (event) => {
     }
 }
 
-pdfButton.addEventListener('click', sendMail);
+const sendPdf = (event) => {
+    event.preventDefault();
+    if (pdfInput.value.length !== 0) {
+        mail = pdfInput.value;
+        content = 'url vers pdf';
+        form = 'pdf';
+        pdfInput.value = '';
+    }else{
+        pdfInput.value = 'Veuillez entrer une chaine de caractère';
+    }
+
+    const data = {
+        from: form,
+        e: mail,
+        t: content
+    }
+
+    fetch('/email', {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ data })
+    })
+    .then(res => res.json())
+    .then((dataPdf) => {
+        console.log(dataPdf);
+    })
+    .catch((err) => {
+        console.log(err);
+    })
+};
+
+pdfButton.addEventListener('click', sendPdf);
 button.addEventListener('click', sendMail);
 chatButton.addEventListener('click', sendMail);
 
