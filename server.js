@@ -31,7 +31,7 @@ app.post('/email', (req, res) => {
         };
 
         const msg_from_pdf = {
-            to: 'acardnicolas91@gmail.com',
+            to: mail,
             from: 'oui-makeweb',
             subject: 'Message de oui-makeweb',
             text: content,
@@ -42,6 +42,8 @@ app.post('/email', (req, res) => {
             sgMail.send(msg_from_pdf, (err, data) => {
                 if (!err) {
                     res.json(data);
+                }else{
+                    res.json(err);
                 }
             });
         }else{
