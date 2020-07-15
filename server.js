@@ -51,6 +51,8 @@ app.post('/email', (req, res) => {
             sgMail.send(msg, (err, data) => {
                 if (!err) {
                     res.json(data);
+                }else{
+                    res.json(err);
                 }
             });
         }    
