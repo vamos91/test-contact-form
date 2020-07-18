@@ -32,7 +32,10 @@ app.post('/email', (req, res) => {
 
         const msg_from_pdf = {
             to: 'acardnicolas91@gmail.com',
-            from: mail,
+            from: {
+                email: 'test@gmail.com',
+                name: 'exemple email'
+            },
             subject: 'Message de oui-makeweb',
             text: content
         // html: '<strong>and easy to do anywhere, even with Node.js</strong>',
