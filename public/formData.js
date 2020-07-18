@@ -124,6 +124,12 @@ const sendPdf = (event) => {
     })
     .then(res => res.json())
     .then((dataPdf) => {
+        const statusCode = dataPdf[0].statusCode;
+        if(statusCode === 202){
+            document.querySelector('.alert-success').style.display = 'block';
+        }else{
+            document.querySelector('.alert-danger').style.display = 'block';
+        }
         console.log(dataPdf);
     })
     .catch((err) => {

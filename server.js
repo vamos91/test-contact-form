@@ -38,13 +38,13 @@ app.post('/email', (req, res) => {
         const msg_from_pdf = {
             to: mail,
             from: {
-                email: 'contact@ouimakeweb.fr',
+                email: 'no-reply@ouimakeweb.fr',
                 name: 'oui-makeweb'
             },
             subject: 'Message de oui-makeweb',
             text: 'https://ouimakeweb.herokuapp.com/download',
             html: `
-            <strong>Bonjour, veuillez cliquer sur le bouton pour téléchager votre PDF gratuit</strong>
+            Bonjour, <p><strong>veuillez cliquer sur le bouton pour téléchager votre PDF gratuit</strong></p>
             <a href="https://ouimakeweb.herokuapp.com/download" class="btn btn-danger">Télécharger PDF</a>
             `
         }
