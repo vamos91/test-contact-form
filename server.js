@@ -31,18 +31,10 @@ app.post('/email', (req, res) => {
         };
 
         const msg_from_pdf = {
-            to: mail,
-            from: 'oui-makeweb',
+            to: 'acardnicolas91@gmail.com',
+            from: mail,
             subject: 'Message de oui-makeweb',
-            text: content,
-            files: [
-                {
-                    filename: './public/docs/doc.pdf',           // required only if file.content is used.
-                    path: '',           //
-                    url: '',           // == One of these three options is required
-                    content: ('' | Buffer) //
-                }
-            ]
+            text: content
         // html: '<strong>and easy to do anywhere, even with Node.js</strong>',
         }
         if (from === 'pdf'){
