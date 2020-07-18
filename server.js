@@ -5,7 +5,6 @@ const port = process.env.PORT || 3000;
 const path = require('path');
 const bodyParser = require('body-parser');
 const nodeMailer = require('nodemailer');
-const fs = require('fs');
 require('dotenv').config();
 const sgMail = require('@sendgrid/mail');
 
@@ -17,6 +16,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/index.html'))
+});
+
+app.get('/download', function (req, res) {
+    const file = `${__dirname}/public/docs/doc.pdf`;
+    res.download(file); // Set disposition and send it.
 });
 
 app.post('/email', (req, res) => {
@@ -38,52 +42,21 @@ app.post('/email', (req, res) => {
                 name: 'oui-makeweb'
             },
             subject: 'Message de oui-makeweb',
-            text: content,
-            files: [
-                {
-                    filename: './public/docs/doc.pdf',  // required only if file.content is used.
-                    cid: '',           // optional, used to specify cid for inline content
-                    path: '',           //
-                    url: '',           // == One of these three options is required
-                    content: ('' | Buffer) //
-                }
-            ]
-        // html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+            text: 'https://ouimakeweb.herokuapp.com/download',
+            html: `
+            <strong>Bonjour, veuillez cliquer sur le bouton pour téléchager votre PDF gratuit</strong>
+            <a href="https://ouimakeweb.herokuapp.com/download" class="btn btn-danger">Télécharger PDF</a>
+            `
         }
         if (from === 'pdf'){
             console.log(msg_from_pdf);
-            fs.readFile('./public/docs/doc.pdf', (err, fileData) => {
-                if(err){
-                    console.log(err.message);
+            sgMail.send(msg_from_pdf, (err, data) => {
+                if (!err) {
+                    res.json(data);
+                }else{
+                    res.json(err);
                 }
-                console.log(fileData);
-                sgMail.send({
-                    to: mail,
-                    from: {
-                        email: 'contact@ouimakeweb.fr',
-                        name: 'oui-makeweb'
-                    },
-                    subject: 'Message de oui-makeweb',
-                    text: content,
-                    files: [
-                        {
-                            filename: 'doc.pdf',  // required only if file.content is used.
-                            cid: '',           // optional, used to specify cid for inline content
-                            path: '',           //
-                            url: '',           // == One of these three options is required
-                            content: fileData //
-                        }
-                    ]
-                    // html: '<strong>and easy to do anywhere, even with Node.js</strong>',
-                }, (err, data) => {
-                    if (!err) {
-                        res.json(data);
-                    } else {
-                        res.json(err);
-                    }
-                });
-            })
-            
+            });
         }else{
             console.log(msg)
             sgMail.send(msg, (err, data) => {
