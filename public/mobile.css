@@ -1,6 +1,6 @@
-@media screen and (max-width: 414px){
-    .navbar{
-        display: none;   
+@media screen and (max-width: 411px){
+    .bar{
+        display: none;  
     }
 
     .nav-item-xs{
@@ -15,11 +15,7 @@
         font-size: 32px;
     }
 
-    .punch-line{
-        font-size: 14px;
-    }
-
-    .banner p{
+    .left-bloc p{
         display: none;
     }
 
@@ -30,12 +26,20 @@
     .right-bloc .cta{
         display: block;
         margin: auto;
-        margin-top: 100px;
+        margin-top: 20px;
+    }
+
+    .right-bloc .card-body p{
+        font-size: 12px;
     }
 
     .bloc3 h2{
         font-size: 16px;
         padding: 50px;
+    }
+
+    .chat{
+        display: none;
     }
 
     .feature{
@@ -51,7 +55,7 @@
     }
 
     .text-bloc p{
-        font-size: 8px;
+        font-size: 16px;
     }
 
     .text-bloc{
@@ -91,8 +95,9 @@
         font-size: 8px;
     }
 
-    footer{
-        padding: 40px;
+    .footer{
+        padding: 10px;
+        height: auto;
     }
 
     form{
@@ -100,9 +105,10 @@
     }
 
     .avatar{
+        display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        display: flex;
+        width: fit-content;
     }
 
     .presentation ul{
@@ -126,4 +132,43 @@
         margin-top: 100px;
     }
     
+    .newsletter{
+        padding: 20px;
+    }
+
+    .newsletter button,
+    #newsletter-input
+    {
+        width: 100%;
+    }
+
+    #newsletter-input{
+        margin-bottom: 10px;
+    }
+
+    .newsletter h2{
+        font-size: 1rem;
+    }
+
+    .left-bloc{
+        text-align: center;
+    }
+
+    .punch-line{
+        padding: 0;
+        font-size: 14px;
+    }
+
+    .presentation span{
+        font-size: 16px;
+    }
+
+    .wrapper-card p{
+        font-size: 12px;
+    }
+
+    .bloc2{
+        margin-bottom: 50px;
+    }
+
 }

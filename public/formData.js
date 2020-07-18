@@ -103,7 +103,7 @@ const sendPdf = (event) => {
     if (pdfInput.value.length !== 0) {
         mail = pdfInput.value;
         content = 'url vers pdf';
-        form = 'chat';
+        form = 'pdf';
         pdfInput.value = '';
     }else{
         pdfInput.value = 'Veuillez entrer une chaine de caractère';
