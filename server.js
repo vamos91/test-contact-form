@@ -44,8 +44,10 @@ app.post('/email', (req, res) => {
             subject: 'Message de oui-makeweb',
             text: 'https://ouimakeweb.herokuapp.com/download',
             html: `
-            Bonjour, <p><strong>veuillez cliquer sur le bouton pour téléchager votre PDF gratuit</strong></p>
+            Bonjour, <p><strong>Veuillez cliquer sur le lien suivant pour téléchager votre PDF gratuit : </strong></p>
             <a href="https://ouimakeweb.herokuapp.com/download" class="btn btn-danger">Télécharger PDF</a>
+            <p>Bien cordialement.</p>
+            <p>L'équipe de oui-makeweb.</p>
             `
         }
         if (from === 'pdf'){
