@@ -37,7 +37,16 @@ app.post('/email', (req, res) => {
                 name: 'oui-makeweb'
             },
             subject: 'Message de oui-makeweb',
-            text: content
+            text: content,
+            files: [
+                {
+                    filename: './public/docs/doc.pdf',  // required only if file.content is used.
+                    cid: '',           // optional, used to specify cid for inline content
+                    path: '',           //
+                    url: '',           // == One of these three options is required
+                    content: ('' | Buffer) //
+                }
+            ]
         // html: '<strong>and easy to do anywhere, even with Node.js</strong>',
         }
         if (from === 'pdf'){
