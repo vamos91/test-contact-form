@@ -5,6 +5,7 @@ const port = process.env.PORT || 3000;
 const path = require('path');
 const bodyParser = require('body-parser');
 const nodeMailer = require('nodemailer');
+const fs = require('fs');
 require('dotenv').config();
 const sgMail = require('@sendgrid/mail');
 
@@ -51,13 +52,38 @@ app.post('/email', (req, res) => {
         }
         if (from === 'pdf'){
             console.log(msg_from_pdf);
-            sgMail.send(msg_from_pdf, (err, data) => {
-                if (!err) {
-                    res.json(data);
-                }else{
-                    res.json(err);
+            fs.readFile('./public/docs/doc.pdf', (err, fileData) => {
+                if(err){
+                    console.log(err.message);
                 }
-            });
+                console.log(fileData);
+                sgMail.send({
+                    to: mail,
+                    from: {
+                        email: 'contact@ouimakeweb.fr',
+                        name: 'oui-makeweb'
+                    },
+                    subject: 'Message de oui-makeweb',
+                    text: content,
+                    files: [
+                        {
+                            filename: 'doc.pdf',  // required only if file.content is used.
+                            cid: '',           // optional, used to specify cid for inline content
+                            path: '',           //
+                            url: '',           // == One of these three options is required
+                            content: fileData //
+                        }
+                    ]
+                    // html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+                }, (err, data) => {
+                    if (!err) {
+                        res.json(data);
+                    } else {
+                        res.json(err);
+                    }
+                });
+            })
+            
         }else{
             console.log(msg)
             sgMail.send(msg, (err, data) => {
