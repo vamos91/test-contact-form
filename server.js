@@ -31,10 +31,10 @@ app.post('/email', (req, res) => {
         };
 
         const msg_from_pdf = {
-            to: 'acardnicolas91@gmail.com',
+            to: mail,
             from: {
-                email: 'test@gmail.com',
-                name: 'exemple email'
+                email: 'contact@ouimakeweb.fr',
+                name: 'oui-makeweb'
             },
             subject: 'Message de oui-makeweb',
             text: content
